@@ -1,0 +1,19 @@
+<div class="card-wrapper">
+  <mat-card class="card">
+    <mat-card-content>
+      <div *ngFor="let question of questions">
+        <p>{{ question }}</p>
+        <mat-radio-group [(ngModel)]="chosen">
+          <mat-radio-button class="radio-button" *ngFor="let answer of answers" [value]="answer">
+            {{answer}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Voltar</button>
+      <button mat-raised-button color="primary">Salvar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
