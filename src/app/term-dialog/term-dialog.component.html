@@ -1,0 +1,17 @@
+<div style="float: right">
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div class="text-center">
+    <h2 mat-dialog-title>Termo</h2>
+    <mat-dialog-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac nisl pretium, facilisis orci in, aliquam lectus.
+        Morbi aliquet suscipit felis sit amet porta. Nam purus ante, dignissim sed bibendum quis, hendrerit in nunc. Proin
+        et justo sed nisi gravida euismod eget ac odio.</p>
+      <p>
+        <mat-checkbox [(ngModel)]="accepted" color="primary">Li e aceito os termos e condições acima.</mat-checkbox>
+      </p>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!accepted">Ok, entendi.</button>
+    </mat-dialog-content>
+</div>
