@@ -10,8 +10,8 @@
         Morbi aliquet suscipit felis sit amet porta. Nam purus ante, dignissim sed bibendum quis, hendrerit in nunc. Proin
         et justo sed nisi gravida euismod eget ac odio.</p>
       <p>
-        <mat-checkbox [(ngModel)]="accepted" color="primary">Li e aceito os termos e condições acima.</mat-checkbox>
+        <mat-checkbox [(ngModel)]="accepted" color="accent">Li e aceito os termos e condições acima.</mat-checkbox>
       </p>
-      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!accepted">Ok, entendi.</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!accepted" (click)="goToSuccess()">Ok, entendi.</button>
     </mat-dialog-content>
 </div>

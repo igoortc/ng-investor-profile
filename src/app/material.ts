@@ -7,7 +7,9 @@ import {
   MatCardModule,
   MatDialogModule,
   MatRadioModule,
-  MatDividerModule
+  MatDividerModule,
+  MatSelectModule,
+  MatGridListModule
 } from '@angular/material';
 
 @NgModule({
@@ -19,7 +21,9 @@ import {
     MatCardModule,
     MatDialogModule,
     MatRadioModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule,
+    MatGridListModule
   ],
   exports: [
     MatButtonModule,
@@ -29,7 +33,9 @@ import {
     MatCardModule,
     MatDialogModule,
     MatRadioModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule,
+    MatGridListModule
   ]
 })
 

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,12 +26,13 @@ import { SuccessComponent } from './success/success.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule
   ],
   entryComponents: [
     TermDialogComponent
   ],
-  providers: [],
+  providers: [QuestionnaireComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

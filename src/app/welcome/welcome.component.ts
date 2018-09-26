@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { TermDialogComponent } from '../term-dialog/term-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -10,7 +11,7 @@ import { TermDialogComponent } from '../term-dialog/term-dialog.component';
 
 export class WelcomeComponent {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private router: Router) { }
 
   openTermDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -20,5 +21,9 @@ export class WelcomeComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(result)
     });
+  }
+
+  goToQuestionnaire() {
+    this.router.navigate(['/questionnaire']);
   }
 }
