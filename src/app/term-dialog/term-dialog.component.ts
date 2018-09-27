@@ -10,13 +10,9 @@ import { Router } from '@angular/router';
 
 export class TermDialogComponent {
 
-  // modalTitle: string;
   checked = false;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private router: Router) {
-    // this.modalTitle = data.title;
-    console.log(data)
-  }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private router: Router) { }
 
   goToSuccess() {
     this.router.navigate(['/success']);

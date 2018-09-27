@@ -11,8 +11,8 @@ $custom-typography: mat-typography-config(
 );
 @include mat-core($custom-typography);
 
-$primary: mat-palette($mat-yellow, 700);
-$accent: mat-palette($mat-purple, 400);
+$primary: mat-palette($mat-purple, 400);
+$accent: mat-palette($mat-pink, 800);
 $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
 

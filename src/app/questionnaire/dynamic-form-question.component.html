@@ -1,0 +1,24 @@
+<div [formGroup]="form">
+  <div [ngSwitch]="question.controlType">
+    <div *ngSwitchCase="'select'">
+      <p *ngIf="question.title">{{ question.title }}</p>
+      <mat-form-field>
+        <p>{{ question.label }} <span *ngIf="!isValid" style="color: red">*</span></p>
+        <mat-select [id]="question.key" [formControlName]="question.key">
+          <mat-option *ngFor="let opt of question.options" [value]="opt.key">
+            {{ opt.value }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngSwitchCase="'radio'" class="question">
+      <p>{{ question.id }} - {{ question.label }} <span *ngIf="!isValid" style="color: red">*</span></p>
+      <mat-radio-group [id]="question.key" [formControlName]="question.key">
+        <mat-radio-button class="radio-button" *ngFor="let opt of question.options" [value]="opt.key">
+          {{ opt.value }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="!answers">
+
+    <div *ngFor="let question of questions" class="form-row">
+      <app-question [question]="question" [form]="form"></app-question>
+    </div>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="goToHome()">Voltar</button>
+      <button mat-raised-button color="primary"  type="submit" [disabled]="!form.valid">Salvar</button>
+    </mat-card-actions>
+  </form>
+
+  <div *ngIf="answers" class="form-row">
+      <img src="https://image0.flaticon.com/icons/png/128/368/368654.png" class="card-image"/>
+      <h2>Sucesso!</h2>
+      <h3>Estas foram as suas respostas:</h3>
+      <div class *ngFor="let a of allData">
+        {{ a.key }}: <em>{{ a.value }}</em>
+        <br/><br/>
+      </div>
+  </div>
+</div>

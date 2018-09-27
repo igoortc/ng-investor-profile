@@ -11,6 +11,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TermDialogComponent } from './term-dialog/term-dialog.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { SuccessComponent } from './success/success.component';
+import { DynamicFormComponent }         from './questionnaire/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './questionnaire/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SuccessComponent } from './success/success.component';
     WelcomeComponent,
     TermDialogComponent,
     QuestionnaireComponent,
-    SuccessComponent
+    SuccessComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,6 @@ import { SuccessComponent } from './success/success.component';
   entryComponents: [
     TermDialogComponent
   ],
-  providers: [QuestionnaireComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

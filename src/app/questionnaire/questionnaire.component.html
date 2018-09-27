@@ -2,32 +2,7 @@
   <mat-card class="card">
     <mat-card-content>
       <h3>Perfil do Investidor - Questionário</h3>
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      </form>
-      <div *ngFor="let question of questionnaire; index as i" class="question">
-        <p>{{ i + 1 }} - {{ question.title }}</p>
-        <div *ngIf="question.options.length > 0">
-          <mat-radio-group [(ngModel)]="radios[i]" *ngFor="let option of question.options" [required]="true">
-            <mat-radio-button class="radio-button" [value]="option">
-              {{ option }}
-            </mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <div *ngIf="question.subquestions.length > 0">
-          <mat-form-field *ngFor="let subquestion of question.subquestions; index as j">
-            <p>{{ subquestion.title }} </p>
-            <mat-select [(value)]="selects[j]" [required]="true">
-              <mat-option *ngFor="let option of subquestion.options" [value]="option">
-                {{ option }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-      </div>
+      <app-dynamic-form [questions]="questions"></app-dynamic-form>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button (click)="goToHome()">Voltar</button>
-      <button mat-raised-button color="primary" (click)="show()">Salvar</button>
-    </mat-card-actions>
   </mat-card>
 </div>

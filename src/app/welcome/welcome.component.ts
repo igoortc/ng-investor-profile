@@ -18,9 +18,7 @@ export class WelcomeComponent {
     dialogConfig.disableClose = true;
     dialogConfig.width = '400px';
     const dialogRef = this.dialog.open(TermDialogComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result)
-    });
+    dialogRef.afterClosed().subscribe(result => { });
   }
 
   goToQuestionnaire() {
